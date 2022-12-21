@@ -10,5 +10,4 @@ Download the files and open cmd or terminal make sure that you installed pandas,
 This project built for my final project presentation.
 
 For more details about the project:
-
 Download the pptx file above.

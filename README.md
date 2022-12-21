@@ -27,7 +27,12 @@ DF features:
 
 Data Preparation:
 
-Handled duplicates,missing data values,missing rows,Zero variance features,Replace Nans values and Outliers Detection(IQR method).
+ - Duplicates
+ - missing data values
+ - missing rows
+ - Zero variance features
+ - Replace Nans values
+ - Outliers Detection(IQR method).
 
 Feature Scaling:
 
@@ -36,8 +41,7 @@ If left alone, these algorithms only take in the magnitude of features neglectin
 To supress this effect, we need to bring all features to the same level of magnitudes. This can be acheived by scaling.
 
 For our purpose:
-- Min-Max Normalization elected.
-- This technique re-scales a feature or observation value with distribution value between 0 and 1.
+- Min-Max Normalization - elected This technique re-scales a feature or observation value with distribution value between 0 and 1.
 
 Model Selection:
 

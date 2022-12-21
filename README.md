@@ -15,7 +15,15 @@ Data science perspective:
 
 DF features:
 
-Year, Crop, Location, K [Potassium], P [phosphorus], N [nitrogen], Average Humidity, Average Rainfall,Average Temperature
+- Year - The year the information was collected
+- Crop - The type of crop
+- Location - The Location the information was collected
+- K [Potassium] - Potassium levels in the soil
+- P [phosphorus] - Phosphorus levels in the soil
+- N [nitrogen] - Nitrogen levels in the soil
+- Average Humidity
+- Average Rainfall
+- Average Temperature
 
 Data Preparation:
 
@@ -28,8 +36,8 @@ If left alone, these algorithms only take in the magnitude of features neglectin
 To supress this effect, we need to bring all features to the same level of magnitudes. This can be acheived by scaling.
 
 For our purpose:
-Min-Max Normalization elected.
-This technique re-scales a feature or observation value with distribution value between 0 and 1.
+- Min-Max Normalization elected.
+- This technique re-scales a feature or observation value with distribution value between 0 and 1.
 
 Model Selection:
 

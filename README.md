@@ -41,13 +41,12 @@ For our purpose:
 
 Model Selection:
 
-RandomForestRegressor elected due to the model has an effective method for estimating missing data and maintains accuracy when a large propotion of data are missing. 
-
-
+- RandomForestRegressor - elected due to the model has an effective method for estimating missing data and maintains accuracy when a large propotion of data are missing. 
 
 This project built for my final project presentation.
 
 
 For more details about the project:
-Download the pptx file above.
+
+- Download the pptx file above.
 

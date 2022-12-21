@@ -47,7 +47,7 @@ Model Selection:
 
 - RandomForestRegressor - elected due to the model has an effective method for estimating missing data and maintains accuracy when a large propotion of data are missing. 
 
-This project built for my final project presentation.
+This project built for presentation as part of the thesis.
 
 
 For more details about the project:

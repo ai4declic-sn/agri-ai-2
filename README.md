@@ -1,4 +1,8 @@
 # Agriculture Predictor
+
+![image](https://user-images.githubusercontent.com/109544498/224578539-6d78382a-e1ba-43df-ab33-9b3957bfc364.png)
+
+
 EASY WAY TO WATCH:
 
 https://jonathanaarondev-agriculture-predictor-main-d7d3i8.streamlit.app/

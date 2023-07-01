@@ -8,3 +8,4 @@ scipy==1.9.3
 toml==0.10.2
 matplotlib==3.6.2
 shap==0.41.0
+numpy==1.24

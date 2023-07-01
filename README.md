@@ -5,7 +5,7 @@
 
 EASY WAY TO WATCH:
 
-https://jonathanaarondev-agriculture-predictor-main-d7d3i8.streamlit.app/
+https://agriculturepredictor-f0p2svy578.streamlit.app/
 
 OR:
 

@@ -9,6 +9,7 @@ toml==0.10.2
 matplotlib==3.5.1
 shap==0.41.0
 numpy==1.20.3
+numba==0.53.1
 
 
 

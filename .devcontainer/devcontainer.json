@@ -1,0 +1,171 @@
+{
+	"name": "Base Python devcontainer",
+	"build": {
+		"dockerfile": "./Dockerfile",
+		"context": "."
+	},
+	"containerEnv": {
+		"JUPYTER_PLATFORM_DIRS": "1"
+	},
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/starship:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/github-cli:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": 11
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"files.eol": "\n",
+				"terminal.integrated.profiles.linux": {
+					"bash": {
+						"path": "bash",
+						"icon": "terminal-bash"
+					},
+					"fish": {
+						"path": "fish",
+						"icon": "terminal-linux"
+					}
+				},
+				"terminal.integrated.defaultProfile.linux": "fish",
+				"python.pythonPath": "./.venv/bin/python",
+				"python.defaultInterpreterPath": "./.venv/bin/python",
+				"python.formatting.blackPath": "./.venv/bin/black",
+				"ruff.path": [
+					"./.venv/bin/ruff"
+				],
+				"ruff.enable": true,
+				"python.testing.pytestPath": "./.venv/bin/pytest",
+				"python.testing.pytestEnabled": true,
+				"python.languageServer": "Pylance",
+				"python.testing.unittestEnabled": false,
+				"python.testing.autoTestDiscoverOnSaveEnabled": false,
+				"python.formatting.provider": "none",
+				"python.showStartPage": false,
+				"editor.formatOnSave": true,
+				"editor.suggestSelection": "first",
+				"editor.bracketPairColorization.enabled": true,
+				"editor.guides.bracketPairs": true,
+				"editor.codeActionsOnSave": {
+					"source.fixAll": true
+				},
+				"git.confirmSync": false,
+				"git.enableSmartCommit": true,
+				"cSpell.allowCompoundWords": true,
+				"cSpell.language": "en",
+				"cSpell.userWords": [
+					"numpy",
+					"pydantic",
+					"openpyxl",
+					"isort",
+					"mypy",
+					"Pylance",
+					"pylint",
+					"pytest",
+					"venv",
+					"Mauss",
+					"pyspark",
+					"adpyke",
+					"toolsai",
+					"Gruntfuggly",
+					"mhutchie",
+					"davidanson",
+					"jebbs",
+					"plantuml",
+					"doxdocgen",
+					"myml",
+					"njpwerner",
+					"mechatroner",
+					"visualstudioexptteam",
+					"vscodeintellicode",
+					"pyproject"
+				],
+				"todo-tree.filtering.excludeGlobs": [
+					"**/.venv/**",
+					"**/.git/**",
+					"**/dist/**",
+					"**/.vscode/**",
+					"**/.github/**",
+					"**/_build/**",
+					"**/build/**",
+					"**/_output/**"
+				],
+				"todo-tree.highlights.customHighlight": {
+					"TODO": {
+						"type": "text",
+						"foreground": "#FF8000",
+						"icon": "alert",
+						"iconColour": "#FF8000",
+						"gutterIcon": true
+					},
+					"FIXME": {
+						"type": "line",
+						"foreground": "#FFFF00",
+						"iconColour": "#FFFF00",
+						"gutterIcon": true
+					},
+					"HACK": {
+						"type": "text",
+						"foreground": "#00FFFF",
+						"icon": "shield",
+						"iconColour": "#00FFFF",
+						"gutterIcon": true
+					},
+					"BUG": {
+						"type": "line",
+						"foreground": "#FF0000",
+						"iconColour": "#FF0000",
+						"gutterIcon": true
+					}
+				},
+				"todo-tree.general.tags": [
+					"BUG",
+					"HACK",
+					"FIXME",
+					"TODO"
+				],
+				"telemetry.telemetryLevel": "off",
+				"rest-client.enableTelemetry": false,
+				"telemetry.enableTelemetry": false
+			},
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-azuretools.vscode-docker",
+				"ms-python.python",
+				"ms-python.black-formatter",
+				"ms-vscode.makefile-tools",
+				"visualstudioexptteam.vscodeintellicode",
+				"github.vscode-pull-request-github",
+				"adpyke.vscode-sql-formatter",
+				"github.copilot",
+				"ms-toolsai.jupyter",
+				"ms-toolsai.vscode-jupyter-cell-tags",
+				"ms-toolsai.jupyter-keymap",
+				"ms-toolsai.jupyter-renderers",
+				"Gruntfuggly.todo-tree",
+				"mhutchie.git-graph",
+				"streetsidesoftware.code-spell-checker",
+				"davidanson.vscode-markdownlint",
+				"cameron.vscode-pytest",
+				"jebbs.plantuml",
+				"bat67.markdown-extension-pack",
+				"myml.vscode-markdown-plantuml-preview",
+				"charliermarsh.ruff",
+				"cschlosser.doxdocgen",
+				"ms-toolsai.datawrangler",
+				"njpwerner.autodocstring",
+				"mechatroner.rainbow-csv"
+			]
+		}
+	},
+	"waitFor": "postStartCommand",
+	"onCreateCommand": "bash .devcontainer/initialize-environment.sh",
+	"postStartCommand": "poetry run pre-commit install",
+	"remoteUser": "vscode"
+}
